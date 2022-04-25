@@ -33,21 +33,37 @@
         border-radius: 5px;
       }
       #movies {
+        padding: 10px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 10px;
+      }
+      #movies > div {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 12px;
       }
       #movies > div > img {
         width: 100%;
         aspect-ratio: 2/3;
       }
       #movies > div > p {
+        margin: 1em;
         font-weight: bold;
       }
       button:hover {
         background-color: teal;
         color: white;
         cursor: pointer;
+      }
+      @media screen and (max-width: 1000px) {
+        #movies {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media screen and (max-width: 500px) {
+        #movies {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
     </style>
   </head>
