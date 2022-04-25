@@ -7,7 +7,7 @@ let amount = localStorage.getItem("amount");
 document.querySelector("#wallet").innerText = amount;
 let getData = () => {
   let search = document.querySelector("#search").value;
-  let url = `http://www.omdbapi.com/?apikey=${key}&s=${search}&type=movie`;
+  let url = `https://www.omdbapi.com/?apikey=${key}&s=${search}&type=movie`;
   return fetchFunc(url);
 };
 
